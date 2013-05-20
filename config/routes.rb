@@ -3,6 +3,8 @@ HackDay3::Application.routes.draw do
 
 root to: 'contacts#new'
 
+match "/:random_id" => "contacts#show", :constraints => {:random_id => /([a-zA-Z]|\d){3,6}/}
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

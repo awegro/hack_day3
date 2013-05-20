@@ -1,0 +1,31 @@
+// Place all the styles related to the Contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new_contact p {
+    font-size: 11px;
+    margin: 5px 0 0;
+}
+#new_contact a {
+    color: #666666;
+    text-decoration: none;
+    width:400px;
+}
+.yearbook_err_text {
+    color: red;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+.yearbook_contact_required {
+    font-size: 9px;
+    margin-bottom: 5px;
+}
+#new_contact .yearbook_small_field_left, #yearbook_contact_form .yearbook_small_field_right, #yearbook_contact_form .yearbook_full_field, #yearbook_contact_agree span, #yearbook_contact_form .yearbook_ship_date {
+    color: #666666;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 11px;
+}
+#new_contact .yearbook_small_field_left, #new_contact .yearbook_small_field_right {
+    float: left;
+    margin-bottom: 15px;
+    width: 170px;

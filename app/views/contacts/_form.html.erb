@@ -1,0 +1,91 @@
+<!-- <div id="yearbook_contact_form">
+
+<form id="yb_contact_form" onsubmit="return contactVal();" action="https://e.shutterfly.com/pub/rf" name="YB_CONTACT_FORM">
+<input type="hidden" value="X0Gzc2X%3DWQpglLjHJlTQGlndFMaa1mIafTbCBnzgutzdfzcYzatzdMTzfq2zbkMVwjpnpgHlpgneHmgJoXX0Gzc2X%3DWQpglLjHJlTQGkj9zeO12nmJdJh2zfECLWzatszcYzatzdMTzfq2zbkM" name="_ri_">
+
+<input id="yb_quote_name_first" class="yearbook_small_field_left" type="text" onblur="checkFirstName();" onfocus="clearField('yb_quote_name_first');" value="First name" name="YB_QUOTE_NAME_FIRST">
+<input id="yb_quote_name_last" class="yearbook_small_field_right" type="text" onblur="checkLastName();" onfocus="clearField('yb_quote_name_last');" value="Last name" name="YB_QUOTE_NAME_LAST">
+<div class="clear">
+<input id="yb_quote_email" class="yearbook_small_field_left" type="text" onblur="checkEmail();" onfocus="clearField('yb_quote_email');" value="Enter Your Custom Frame Text" name="CUSTOM_TEXT">
+
+<input class="yearbook_small_field_right"  id="show" value = "Pick Stand Color - E.g. Black">
+</div>
+<div class="clear">
+<input id="yb_quote_email" class="yearbook_small_field_right" type="text" onblur="checkEmail();" onfocus="clearField('yb_quote_email');" value="Email" name="EMAIL_ADDRESS_">
+</div>
+<p><small> Quantity </small><select id="yb_pages" onchange="bookprice();" size="1" name="yb_pages">
+<option value="0">1 </option>
+<option value="1">2</option>
+<option value="2">3</option>
+<option value="3">4</option>
+<option value="4">5</option>
+<option value="5">6</option>
+<option value="6">7</option>
+<option value="7">8</option>
+<option value="8">9</option>
+<option value="9">10</option>
+</select>
+
+
+
+<br>
+<div id="yearbook_contact_agree">
+<input id="yb_quote_contact" type="checkbox" checked="" onclick="checkContact();" value="I" name="EMAIL_PERMISSION_STATUS_">
+<span>I understand that my order is not final until I approve and pay for it.</span>
+</div>
+<button id="yb_quote_button" border="0" padding="0" name="yb_quote_button" type="image" style="border-width: 0px; padding-left: 0px; padding-right: 0px;"><%= image_tag('Button copy.png')%> </button>
+</form>
+</div>
+</div>
+
+BELOW IS FORM
+     -->
+
+<div id="yearbook_contact_form">
+<div class="yearbook_contact_required">All fields required.</div>
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div  class="yearbook_small_field_left" >
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, :class=>'yearbook_small_field_left'%>
+  </div>
+  <div class="yearbook_small_field_right">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name , :class=>'yearbook_small_field_right'%>
+  </div>
+  <div class="yearbook_small_field_left">
+    <%= f.label :color %>
+    <%= f.text_field :color , :class=>'yearbook_small_field_left'%>
+  </div>
+  <div class="yearbook_small_field_right">
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity , :class=>'yearbook_small_field_right'%>
+  </div>
+  <div class="yearbook_small_field_left" >
+    <%= f.label :email %><br />
+    <%= f.text_field :email , :class=>'yearbook_small_field_left'%>
+  </div>
+  <div class="yearbook_small_field_right">
+    <%= f.label :text %><br />
+    <%= f.text_field :text , :class=>'yearbook_small_field_right'%>
+  </div>
+<!--   <div class="actions">
+    <%= f.submit %>
+  </div> -->
+<div class="yearbook_small_field_left"> I understand that my order is not final until I approve and pay for it.</div>
+
+<button id="yb_quote_button" border="0" padding="0" name="yb_quote_button" type="image" style="border-width: 0px; padding-left: 0px; padding-right: 0px;"><%= image_tag('Button.png')%> </button>
+</form>
+<% end %>
+</div>

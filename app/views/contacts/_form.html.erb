@@ -41,6 +41,23 @@
 BELOW IS FORM
      -->
 
+<div id ="capture the content">
+<div id="div1"><p>
+<strong>Make Your Memories Stand Out</strong>
+Our personalized stand is perfect for holding 4x6 and 5x7 photos and cards. Customize your stand with your own words and choose your favorite color. 
+</p>
+<p>
+<strong>Get Yours In Three Easy Steps</strong>
+1. Choose your text, color, and order quantity
+<br>2. Receive and review your personalized design 
+<br>3. Approve and pay for your order
+</p>
+<p>
+You'll receive your order in about two weeks.
+
+
+<div class ="yearbook_contact_required">
+
 <div id="yearbook_contact_form">
 <div class="yearbook_contact_required">All fields required.</div>
 <%= form_for(@contact) do |f| %>
@@ -57,7 +74,7 @@ BELOW IS FORM
   <% end %>
 
   <div  class="yearbook_small_field_left" >
-    <%= f.label :first_name %>
+    <%= f.label :first_name, "First Name" %>
     <%= f.text_field :first_name, :class=>'yearbook_small_field_left'%>
   </div>
   <div class="yearbook_small_field_right">
@@ -65,7 +82,7 @@ BELOW IS FORM
     <%= f.text_field :last_name , :class=>'yearbook_small_field_right'%>
   </div>
   <div class="yearbook_small_field_left">
-    <%= f.label :color %>
+    <%= f.label :color, "Stand's Color" %>
     <%= f.text_field :color , :class=>'yearbook_small_field_left'%>
   </div>
   <div class="yearbook_small_field_right">
@@ -77,7 +94,7 @@ BELOW IS FORM
     <%= f.text_field :email , :class=>'yearbook_small_field_left'%>
   </div>
   <div class="yearbook_small_field_right">
-    <%= f.label :text %><br />
+    <%= f.label :text, "Customized Letters (Max 18)" %><br />
     <%= f.text_field :text , :class=>'yearbook_small_field_right'%>
   </div>
 <!--   <div class="actions">

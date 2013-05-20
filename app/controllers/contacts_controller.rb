@@ -44,7 +44,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
+        format.html { redirect_to @contact, notice: 'Thanks for your interest. You will receive an email from us shortly. Please remember the order is not final until you approve your design and pay for it.' }
         format.json { render json: @contact, status: :created, location: @contact }
       else
         format.html { render action: "new" }
